@@ -158,6 +158,9 @@ int main(int argc, char *argv[]) {
 
     // 数据文件调整
     // data alignment
+    memset((void *) &imu_pre, 0, sizeof(imu_pre));
+    memset((void *) &imu_cur, 0, sizeof(imu_cur));
+  
     IMU imu_cur, imu_pre;
     do {
         imu_pre = imu_cur;
